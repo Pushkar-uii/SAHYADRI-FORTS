@@ -39,6 +39,8 @@ header nav {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+        cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
   
 }
 .rajmudra
@@ -62,7 +64,9 @@ header nav {
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     margin-left: -500px;
-    cursor: grabbing;
+        cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+    
     transition: color 0.5s ease, font-weight 0.3s ease, font-size 0.3s ease;
     &:hover {
         color: rgba(190, 22, 22, 0.78);
@@ -79,18 +83,23 @@ header ul
     padding: 0;
     margin: 0;
     align-items: center;
+        cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
 }
 header ul li {
     color: white;
     font-size: 1.2rem;
     font-weight: 500;
-    cursor: grabbing;
-     transition: color 0.5 ease, font-weight 0.3s ease;
+        cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+     transition: color 0.7s ease-in, font-weight 0.9s ease-in;
     &:hover {
         color: rgba(190, 22, 22, 0.7);
         font-weight: 650;
-          transition: color 0.5s ease, font-weight 0.3s ease;
+          transition: color 0.7s ease-in, font-weight 0.9s ease-in;
           font-size: 1.3rem;
+              cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
     }
 }
 header  a {
@@ -98,12 +107,14 @@ header  a {
     color: white;
     padding: 0 1.5rem;
     text-transform: uppercase;
-     cursor: grabbing;
+        cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+     transition: color 0.7s ease-in, font-weight 0.9s ease-in;
+    
 }
 header a:hover {
     color: rgba(190, 22, 22, 0.7);
     font-weight: 650;
-    transition: color 0.5s ease, font-weight 0.3s ease;
+    transition: color 0.7s ease-in, font-weight 0.7s ease-in;
     font-size: 1.3rem;
 }
 main {
@@ -118,7 +129,7 @@ main {
 {
     position: absolute;
     width: 2280px;  
-    top: 50%;
+    top: 52vh;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
