@@ -237,3 +237,14 @@ main {
     text-align: center;
     font-size: 500px;
 }
+
+
+
+
+.parallax {
+  transform-origin: center center;
+  transition: transform 0.1s ease-out; /* smooth the transform a bit */
+}
+.parallax {
+  will-change: transform;
+}
