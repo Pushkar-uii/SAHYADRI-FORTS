@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaini+Purva&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jaini+Purva&family=Kalam:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'),
+    auto;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(premium_photo-1667761637876-e704c906927d.jpeg);
+}
+main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+   
+    
+}
+header {
+    position: absolute;
+    width: 100%;
+    border-bottom: 2px solid #ccc;
+    z-index: 9999;
+    padding: 0.9rem 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 0.5s ease;
+}
+header:hover {
+    background-color: rgba(255, 255, 255, 0.315);
+    border-bottom: rgb(105, 98, 98) 2px solid;
+    transition: all 0.5s ease, border-bottom 0.5s ease;
+}
+header nav {
+    background-color: rgba(197, 20, 20, 0);
+    position: static;
+    height: 4rem;
+    max-width: 1940px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+        cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+  
+}
+.rajmudra
+{
+    width: 4.3rem;
+    height: 4.3rem;
+    transition: box-shadow 0.5s ease;
+}
+.rajmudra:hover {
+    filter: drop-shadow(0 0 20px #ff910082) drop-shadow(0 0 40px #ff91007a);
+    width: 4.4rem;
+    height: 4.4rem;
+    transition: all 0.5s ease, width 0.3=5s ease, height 0.5s ease;    
+
+}
+.textlogo {
+    font-family: "Jaini Purva", system-ui;
+    color: rgb(155, 54, 54);
+    font-size: 5.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-left: -500px;
+        cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+    
+    transition: color 0.5s ease, font-weight 0.3s ease, font-size 0.3s ease;
+    &:hover {
+        color: rgba(190, 22, 22, 0.78);
+        font-weight: 650;
+        font-size: 5.7rem;
+        transition: color 0.5s ease, font-weight 0.5s ease, font-size 0.5s ease;
+    }
+}
+header ul
+{
+    display: flex;
+    list-style: circle;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+        cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+}
+header ul li {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+        cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+     transition: all 0.7s ease-in, font-weight 0.9s ease-in;
+    &:hover {
+        color: rgba(190, 22, 22, 0.7);
+        font-weight: 650;
+          transition: all 0.7s ease-in, font-weight 0.9s ease-in;
+          font-size: 1.3rem;
+              cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+    }
+}
+header  a {
+    text-decoration: none;
+    color: white;
+    padding: 0 1.5rem;
+    text-transform: uppercase;
+        cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+     transition: color 0.7s ease-in, font-weight 0.9s ease-in;
+    
+}
+header a:hover {
+    color: rgba(190, 22, 22, 0.7);
+    font-weight: 650;
+    transition: all 0.7s ease-in, font-weight 0.7s ease-in;
+    font-size: 1.3rem;
+}
+.container {
+    width: 50vh;
+    height: 66vh;
+    display: flex-column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.144);
+    padding: 10px;
+    border-radius: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 100px;
+    backdrop-filter: box-shadow(10px);
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.5s ease-in-out, transform 0.5s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      background-color: rgba(255, 255, 255, 0.459);
+  
+      font-family: "Poppins", sans-serif;
+      transition: all 0.5s ease-in-out, transform 0.7s ease-in-out;
+    }
+  }
+  .registertitle {
+     text-align: center;
+  font-size: 7em;
+  color: #420303;
+  margin-top: 88px;
+  width: 15vh;
+  height: 4vh;
+  display: flex-column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.144);
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 100px;
+  backdrop-filter: box-shadow(10px);
+  font-size: 30px;
+  font-family: "poppins", sans-serif;
+  transition: all 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.459);
+    transform: scale(1.03) transform(5deg, 5deg);
+    font-family: "Poppins", sans-serif;
+    transition: all 0.5s ease-in-out, transform 0.7s ease-in-out,
+  }
+  }
+  .registerbutton {
+    left: 60%;
+    top: 70%;
+    margin-top: 20px;
+    padding: 5px;
+    background-color: #57bd04;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.5em;
+    width: 13vh;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.1rem;
+    transition: all 0.6s ease-in-out, transform 0.6s ease-in-out;
+    &:hover {
+      background-color: #4a9c03;
+      transform: scale(1.03);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transition: all 0.6s ease-in-out, transform 0.6s ease-in-out;
+      letter-spacing: 0.2rem;
+    }
+  }
+  .loginlink {
+    text-decoration: none;
+    color: #57bd04;
+    font-weight: 500;
+    font-size: 1.2rem;
+    display: inline-block;
+    transition: all 0.5s ease-in-out, font-weight 0.5s ease-in-out;
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-family: "Poppins", sans-serif;
+
+    &:hover {
+      color: rgba(190, 22, 22, 0.7);
+      font-weight: 650;
+      transition: all 0.5s ease-in-out, font-weight 0.5s ease-in-out;
+      font-size: 1.3rem;
+    }
+  }
+ 
+.dhal-left {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  width: 22vw;
+  height: auto;
+  z-index: -1; 
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, left 1s ease-in-out;
+  opacity: 0.8;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.3));
+}
+
+.dhal-right {
+  position: absolute;
+  top:50%;
+  width: 22vw;
+  transform: translateY(-50%);
+  right: 10%;
+  height: auto;
+  z-index: -1; 
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, right 1s ease-in-out;
+  opacity: 0.8;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.3));
+}
+.input-group {
+    width: 100%;
+    padding: 10px;
+    margin:  0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+  
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+        
+        outline: none;
+        transition: all 0.5s ease-in-out;
+    }
+}
+.registertext
+{
+    font-size: 1.5rem;
+    color: #420303;
+    margin-top: 10px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+.formbox {
+    width: 72%;
+    height: 5vh;
+    padding: 0px;
+    margin: 0px 0;
+    background-color: #6a6d6869;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+        border-color: #57bd04;
+        outline: none;
+        transition: all 0.5s ease-in-out;
+    }
+}
+.form-title {
+    font-size: 1.2rem;
+    color: #420303;
+    margin-bottom: 5px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.5s ease-in-out;
+    &:hover {
+        color: #57bd04;
+        transition: all 0.5s ease-in-out;
+        letter-spacing: 0.3rem;
+    }
+  }
+  .register-text
+  {
+    font-size: 1.2rem;
+    color: #420303;
+    margin-top: 10px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      
+        transition: all 0.5s ease-in-out;
+    }
+  }

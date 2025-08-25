@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="login.css" />
+    <script src="login.js" defer></script>
+
+  </head>
+
+  <body>
+    <header>
+      <nav>
+          <a href="rajmudra.html">
+              <img src="rajmudra-mural-the-royal-seal-of-shivaji-maharaj-500x500-removebg-preview (1) copy.png" alt="rajmudra" class="rajmudra">
+          </a>
+          <p class="textlogo">सह्याद्री</p>
+          <ul>
+              <li><a href="home_page .html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="forts.html">Forts</a></li>
+              <li><a href="contact.html">Contact</a></li>
+           </ul>
+      </nav>
+  </header>
+  <main>
+    <h1 class="logintitle">Login</h1>
+    <img src="dhal-talwar-showpiece-1-removebg-preview.png" alt="dhal-left" class="dhal-left" />
+    <img src="dhal-talwar-showpiece-1-removebg-preview.png" alt="dhal-right" class="dhal-right" />
+    <div class="container">
+      <p class="logintext"> <b>WELCOME BACK !!!</b></p>
+      <form method="post" id="loginForm">
+        <div class="input-group">
+          <label for="username" class="form-title">Username:</label>
+          <input type="text" id="loginUser" name="username" class="formbox" required />
+        </div>
+        <div class="input-group">
+          <label for="password" class="form-title">Password:</label>
+          <input type="password" id="loginPass" name="password" class="formbox" required />
+        </div>
+        <div id="msg"></div>
+        <button type="submit" class="loginbutton">Login</button>
+      </form>
+      <p class="login-text">Don't have an account? </p>
+      <a  href="register.html" class="registerlink">Register here</a>
+    </div>
+    </main>
+  </body>
+</html>
