@@ -1,0 +1,776 @@
+@import url("https://fonts.googleapis.com/css2?family=Jaini+Purva&family=Kalam:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+html::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+body {
+  background-image: url("premium_photo-1667761637876-e704c906927d.jpeg");
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  border-bottom: 2px solid #ccc;
+  z-index: 9999;
+  padding: 0.9rem 0;
+  top: 0;
+  left: 0;
+   text-decoration: none;
+  background-color: rgba(106, 185, 214, 0.464);
+  transition: all 0.5s ease-in-out;
+}
+
+header:hover {
+  background-color: rgba(106, 185, 214, 0.76);
+  border-bottom: rgb(105, 98, 98) 2px solid;
+  transition: all 0.5s ease-in-out;
+  text-decoration: none;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+
+
+header nav {
+  background-color: rgba(197, 20, 20, 0);
+  position: static;
+  height: 4rem;
+  max-width: 1940px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   text-decoration: none;
+  z-index: 1000;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+
+
+.rajmudra {
+  width: 4.3rem;
+  height: 4.3rem;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+  transition: box-shadow 0.5s ease;
+}
+
+
+.rajmudra:hover {
+  filter: drop-shadow(0 0 20px #ff910082) drop-shadow(0 0 40px #ff91007a);
+  width: 4.4rem;
+  height: 4.4rem;
+  transition: box-shadow 0.5s ease, width 0.35s ease, height 0.5s ease;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+
+
+.textlogo {
+  font-family: "Jaini Purva", system-ui;
+  color: rgb(155, 54, 54);
+  font-size: 5.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-left: -350px;
+  top: 0.8rem;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+  transition: color 0.5s ease, font-weight 0.3s ease, font-size 0.3s ease;
+}
+
+.textlogo:hover {
+  color: rgb(190, 22, 22);
+  font-weight: 650;
+  font-size: 5.3rem;
+  transition: color 0.5s ease, font-weight 0.5s ease, font-size 0.5s ease;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+
+
+.pagetitle {
+  font-family: "Kalam", system-ui;
+  color: rgb(155, 54, 54);
+  font-size: 3.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-left: -100px;
+  left: 70%;
+  gap: 0.5rem;
+  margin-top: 4.3rem;
+  align-content: center;
+  justify-content: center;
+  top: 1.5rem;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+  transition: color 0.5s ease, font-weight 0.3s ease, font-size 0.3s ease;
+}
+
+.pagetitle:hover {
+  color: rgba(190, 22, 22, 0.78);
+  font-weight: 650;
+  font-size: 3.7rem;
+  transition: color 0.5s ease, font-weight 0.5s ease, font-size 0.5s ease;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+
+
+@media (max-width: 900px) {
+  .pagetitle {
+    margin-left: -100px;
+    font-size: 2rem;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .pagetitle {
+    margin-left: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    position: static;
+  }
+}
+
+
+header ul {
+  display: flex;
+  list-style: circle;
+  gap: 2.5rem;
+  padding: 0;
+  margin: 0;
+   text-decoration: none;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+
+header ul li {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+  transition: color 0.5 ease, font-weight 0.3s ease;
+}
+
+header ul li:hover {
+  color: rgba(190, 22, 22, 0.7);
+  font-weight: 650;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  font-size: 1.3rem;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+  padding: 0.2rem;
+  text-transform: uppercase;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+  transition: all 0.5s ease-in-out;
+}
+
+header a:hover {
+  color: rgba(190, 22, 22, 0.7);
+  font-weight: 650;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  font-size: 1.3rem;
+}
+
+.cover-img {
+  display: block;
+  margin: 10rem auto 0 auto; /* Center horizontally, keep top margin */
+  width: 100%;
+  height: 68vh;
+  object-fit: fill;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  border-radius: 10px;
+   transition: all 0.5s ease-in-out;
+}
+
+/* Center overlay-text and any elements inside image-container */
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+   transition: all 0.5s ease-in-out;
+}
+
+/* Center overlay-text absolutely over the image */
+.overlay-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  color: whitesmoke;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+   transition: all 0.5s ease-in-out;
+}
+
+.overlay-text:hover {
+  color: #dd4646;
+    transition: all 0.5s ease-in-out;
+
+
+}
+
+.overlay-text h1 {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.overlay-text p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.explore-btn {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 36px;
+  font-size: 18px;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+  text-decoration: none; 
+  font-weight: bold;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+
+.explore-btn:hover {
+      cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+
+  background-color: #b71c1c;
+  text-decoration: none; 
+}
+
+
+.explore-link
+{
+    text-decoration: none; 
+    color: white;
+    transition: all 0.5s ease-in-out;
+      cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+        text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* ======= Grid Container: 3 columns for 9 items ======= */
+.image-grid {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+ 
+  transition: all 0.5s ease-in-out;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+
+}
+
+
+/* ======= Grid Items ======= */
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+ transition: all 0.5s ease-in-out; /* smooth transition for blur */
+   cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+
+}
+
+
+/* Images inside grid */
+.grid-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+
+  transition: all 0.5s ease-in-out;
+}
+
+
+/* Zoom on hover */
+.grid-item:hover img {
+  transform: scale(1.1);
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+
+  transition: all 0.5s ease-in-out;
+}
+
+
+/* Text overlay container */
+.overlay {
+  position: absolute;
+  inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0 */
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 60%);
+  color: white;
+  
+  transition: opacity 0.3s ease;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+
+
+/* Show overlay while hovering item */
+.grid-item:hover .overlay {
+  opacity: 1;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+
+}
+
+
+/* Text styles */
+.overlay h3 {
+  margin: 0;
+  font-size: 1.6rem;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+
+  font-weight: 700;
+}
+
+
+.overlay p {
+  margin: 5px 0 0 0;
+  font-size: 1rem;
+}
+
+
+/* BLUR ONLY WHILE HOVERING A GRID ITEM */
+.image-grid:has(.grid-item:hover) .grid-item:not(:hover) {
+  filter: blur(1px);
+  pointer-events: none;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+
+   transition: all 0.5s ease-in-out; /* Optional; disable clicks on blurred images */
+}
+
+
+/* Reset all blur and pointer events on items by default */
+.image-grid .grid-item {
+  filter: none;
+  pointer-events: auto;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+
+   transition: all 0.5s ease-in-out;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 600px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .grid-item img {
+    height: 200px;
+  }
+}
+
+
+.image-grid .grid-item .overlay a {
+  color: white;
+  text-decoration: none;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+
+   transition: all 0.5s ease-in-out;
+}
+.image-grid .grid-item .overlay a:hover {
+  text-decoration: solid;
+   transition: all 0.5s ease-in-out;
+}
+
+
+.grid-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+
+  height: 100%;
+  z-index: 1;
+   transition: all 0.5s ease-in-out;
+}
+.grid-item {
+  position: relative;
+   transition: all 0.5s ease-in-out;
+         cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+
+}
+.grid-item .overlay {
+  position: absolute;
+  inset: 0;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+
+  z-index: 2; /* Ensure overlay content is above the link */
+   transition: all 0.5s ease-in-out;
+}
+.grid-item .overlay h3, .grid-item .overlay p {
+  position: relative;
+  z-index: 3; /* Ensure text is above the link */
+   transition: all 0.5s ease-in-out;
+     cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+
+}
+/* End of CSS */
+
+
+.sec-title {
+  display: inline-block;
+  position: relative;
+  color: #b71c1c;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;  
+  letter-spacing: 1px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  left: 38.5%;  
+  transition: all 0.5s ease-in-out;
+}
+
+.sec-title::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px; /* underline thickness */
+  bottom: 0;
+  left: 0;
+  background-color: #d32f2f; /* underline color */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.5s ease-in-out;
+  /* add will-change for better performance */
+  will-change: transform;
+}
+
+.sec-title:hover {
+  color: #d32f2f;
+  font-size: 2.7rem;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"/></svg>'), auto;
+  transition: all 0.5s ease-in-out;
+}
+
+.sec-title:hover::after {
+  transform: scaleX(1);
+  transition: all 0.5s ease-in-out;
+}
+
+
+/* Additional Illustrative Features */
+
+/* Glowing effect on section title */
+.sec-title {
+  position: relative;
+  text-shadow: 0 0 8px rgba(211, 47, 47, 0.8), 0 0 12px rgba(211, 47, 47, 0.6);
+}
+
+/* Smooth pulse animation for section title on hover */
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow: 0 0 8px rgba(211, 47, 47, 0.8), 0 0 12px rgba(211, 47, 47, 0.6);
+  }
+  50% {
+    text-shadow: 0 0 18px rgba(211, 47, 47, 1), 0 0 24px rgba(211, 47, 47, 0.9);
+  }
+}
+.sec-title:hover {
+  animation: pulseGlow 2s infinite ease-in-out;
+  color: #b71c1c;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+
+/* Button gradient background & smooth transition */
+.explore-btn {
+  background: linear-gradient(45deg, #e53935, #b71c1c);
+  box-shadow: 0 6px 12px rgba(183, 28, 28, 0.7);
+  transition: background 0.5s ease, box-shadow 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: linear-gradient(45deg, #b71c1c, #7f0000);
+  box-shadow: 0 8px 16px rgba(183, 28, 28, 1);
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+
+/* Main cover image subtle dark gradient overlay for text readability */
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.5), transparent 60%);
+  border-radius: 10px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Hover scale with gentle 3D transform for grid items */
+.grid-item:hover {
+  transform: scale(1.05) translateZ(10px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Overlay fade and color enhancement on hover */
+.grid-item:hover .overlay {
+  background: linear-gradient(to top, rgba(255, 105, 97, 0.85), transparent 60%);
+  opacity: 1;
+  transition: background 0.4s ease;
+}
+
+/* Smooth fade-in animation for overlay text */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.overlay h3 {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.overlay a:hover h3 {
+  color: #ff6f60;
+  transition: color 0.3s ease;
+  transition: all 0.7s ease-in-out;
+}
+
+/* Cursor pointer refinement for links inside overlays */
+.overlay a {
+  cursor: pointer;
+}
+
+
+/* Smooth scroll hint icon below "Explore Now" button */
+.explore-btn {
+  position: relative;
+}
+
+.explore-btn::after {
+  content: "⌄";
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  color: white;
+  opacity: 0.7;
+  animation: bounceArrow 2.3s infinite;
+  transition: all 0.5s ease-in-out;
+  
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 1; }
+}
+
+@keyframes bounceArrow {
+  0%, 100% {
+    transform: translateX(-70%) translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(-70%) translateY(10px) scale(1.2);
+    opacity: 1;
+
+  }
+}
+/* Wrapper container for both grid and sidebar */
+.content-wrapper {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+/* Sidebar styling */
+.sidebar {
+  flex-basis: 300px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 3rem;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: default;
+  transition: all 0.5s ease-in-out;
+}
+
+.sidebar:hover {
+  background: rgba(255, 255, 255, 0.25);
+    transition: all 0.5s ease-in-out;
+
+}
+
+.sidebar-content h3 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: #ec5140;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-shadow: 0 0 6px rgba(61, 21, 17, 0.7);
+}
+
+.sidebar-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: #eee;
+  text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+/* Adjust grid width when sidebar is present */
+.image-grid {
+  flex-grow: 1;
+}
+
+/* Responsive: stack content on smaller screens */
+@media (max-width: 900px) {
+  .content-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .sidebar {
+    flex-basis: auto;
+    padding: 15px;
+  }
+  .image-grid {
+    width: 100%;
+  }
+}
+.social-icons
+{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    size: 3.5em;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+    margin-top: 15px;
+}
+.social-icons  :hover
+{
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+    transform: scale(1.2);
+    transition: all 0.5s ease-in-out;
+
+}
+.social-icons a
+{
+    color: white;
+    font-size: 1.8rem;
+    transition: all 0.5s ease-in-out;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+.social-icons a:hover
+{
+    color: #d32f2f;
+    transition: all 0.5s ease-in-out;
+      cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+    transform: scale(1.2);
+    transition: all 0.5s ease-in-out; 
+}
+
+.footer-content
+{
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 5rem;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+      cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+    transition: all 0.5s ease-in-out;
+}
+.footer-content:hover
+{
+    color: #d32f2f;
+      cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+    transition: all 0.5s ease-in-out;
+    font-weight: 600;
+    font-size: 1.0rem;
+}      

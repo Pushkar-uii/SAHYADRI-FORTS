@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Raigad Fort</title>
+
+<link href="https://openseadragon.github.io/openseadragon/openseadragon.min.css" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jaini+Purva&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+     <link rel="icon" type="image/x-icon" href="rajmudra-mural-the-royal-seal-of-shivaji-maharaj-500x500-removebg-preview (1) copy.png">
+
+<style>
+  html, body {
+    margin: 0; padding: 0; height: 100%; overflow: hidden;
+       background-image: url("premium_photo-1667761637876-e704c906927d.jpeg"); 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  #openseadragon {
+    width: 100vw;
+    height: 100vh;
+       background-image: url("premium_photo-1667761637876-e704c906927d.jpeg"); 
+  }
+  .marker {
+    position: absolute;
+    width: 36px;
+    height: 48px;
+    cursor: pointer;
+    user-select: none;
+    transform: translate(-50%, -100%);
+    transition: all 0.6s ease-in-out;
+  }
+  .marker svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.6));
+    transition: all 0.6s ease-in-out;
+    stroke: rgb(83, 51, 51);
+    stroke-width: 3;
+    fill: #ff0000;
+  }
+  .marker:hover svg {
+    transform: scale(1.5);
+    fill: #091016;
+    stroke: aqua ;
+  }
+  .tooltip {
+    position: absolute;
+    background: rgba(255 255 255 / 0.95);
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-weight: 600;
+    color: #d32f2f;
+    font-size: 1rem;
+    pointer-events: none;
+    white-space: nowrap;
+    box-shadow: 0 0 10px rgba(211, 47, 47, 0.7);
+    transform: translate(-50%, -120%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .tooltip.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  #infoBox {
+    position: relative;
+    bottom: 25px;
+    right: 25px;
+    background: #dd4949e1;
+    color: white;
+    bottom: 45rem;
+    left: 45rem;
+    padding: 15px 20px;
+    border-radius: 12px;
+    max-width: 400px;
+    font-size: 1rem;
+    box-shadow: 0 10px 25px rgba(211,47,47,0.8);
+    display: none;
+    z-index: 10000;
+  }
+  #infoBox img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  #infoBox button {
+    background: transparent;
+    border: 1.5px solid white;
+    border-radius: 8px;
+    color: white;
+    padding: 8px 15px;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.25s, color 0.25s ease-in-out;
+  }
+  #infoBox button:hover {
+    background: white;
+    color: #d32f2f;
+  }
+  #infoBox h2 {
+    margin-top: 0;
+    color: #14423b;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: underline;
+    text-shadow: 0 0 5px rgba(255, 235, 59, 0.7);
+  }
+@import url("https://fonts.googleapis.com/css2?family=Jaini+Purva&family=Kalam:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+
+}
+
+body {
+  background-image: url("premium_photo-1667761637876-e704c906927d.jpeg");
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+header {
+  position: absolute;
+  width: 100%;
+  border-bottom: 2px solid #ccc;
+  z-index: 9999;
+  padding: 0.9rem 0;
+  top: 0;
+  left: 0;
+  margin-bottom: 3rem;
+  background-color: rgba(106, 185, 214, 0.464);
+  transition: all 0.5s ease-in-out;
+}
+
+header:hover {
+  background-color: rgba(106, 185, 214, 0.76);
+  border-bottom: rgb(105, 98, 98) 2px solid;
+  transition: all 0.5s ease-in-out;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+
+header nav {
+  background-color: rgba(197, 20, 20, 0);
+  position: static;
+  height: 4rem;
+  max-width: 1940px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+
+.rajmudra {
+  width: 4.3rem;
+  height: 4.3rem;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+  transition: box-shadow 0.5s ease;
+}
+
+.rajmudra:hover {
+  filter: drop-shadow(0 0 20px #ff910082) drop-shadow(0 0 40px #ff91007a);
+  width: 4.4rem;
+  height: 4.4rem;
+  transition: box-shadow 0.5s ease, width 0.35s ease, height 0.5s ease;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+
+.textlogo {
+  font-family: "Jaini Purva", system-ui;
+  color: rgb(155, 54, 54);
+  font-size: 5.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-left: -350px;
+  top: 0.8rem;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+  transition: color 0.5s ease, font-weight 0.3s ease, font-size 0.3s ease;
+}
+.textlogo:hover {
+  color: rgb(190, 22, 22);
+  font-weight: 650;
+  font-size: 5.3rem;
+  transition: color 0.5s ease, font-weight 0.5s ease, font-size 0.5s ease;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+
+.pagetitle {
+  font-family: "Kalam", system-ui;
+  color: rgb(155, 54, 54);
+  font-size: 3.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-left: -100px;
+  left: 70%;
+  gap: 0.5rem;
+  margin-top: 4.3rem;
+  align-content: center;
+  justify-content: center;
+  top: 1.5rem;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+  transition: color 0.5s ease, font-weight 0.3s ease, font-size 0.3s ease;
+}
+.pagetitle:hover {
+  color: rgba(190, 22, 22, 0.78);
+  font-weight: 650;
+  font-size: 3.7rem;
+  transition: color 0.5s ease, font-weight 0.5s ease, font-size 0.5s ease;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+
+@media (max-width: 900px) {
+  .pagetitle {
+    margin-left: -100px;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .pagetitle {
+    margin-left: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    position: static;
+  }
+}
+
+header ul {
+  display: flex;
+  list-style: circle;
+  gap: 2.5rem;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+
+header ul li {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+  transition: color 0.5 ease, font-weight 0.3s ease;
+}
+header ul li:hover {
+  color: rgba(190, 22, 22, 0.7);
+  font-weight: 650;
+  transition: all 0.5s ease-in-out;
+  font-size: 1.3rem;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+  padding: 0.2rem;
+  text-transform: uppercase;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+  transition: all 0.5s ease-in-out;
+}
+
+header a:hover {
+  color: rgba(190, 22, 22, 0.7);
+  font-weight: 650;
+  transition: all 0.5s ease-in-out;
+  font-size: 1.3rem;
+}
+
+
+  
+</style>
+</head>
+<body>
+<header>
+            <nav>
+            <a href="rajmudra.html">
+               <img src="rajmudra-mural-the-royal-seal-of-shivaji-maharaj-500x500-removebg-preview (1) copy.png" alt="rajmudra" class="rajmudra">
+            </a>
+            <p class="textlogo">सह्याद्री</p>
+            <p class="pagetitle">किल्ले रायगड</p>
+            <ul>
+                <li><a href="home_page .html">HOME</a></li>
+              <li><a href="forts.html">FORTS</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+<div id="openseadragon"></div>
+
+<div id="infoBox" role="dialog" aria-live="polite" aria-atomic="true">
+  <img id="infoImage" src="" alt="Location Image"/>
+  <div id="infoContent"></div>
+  <button onclick="closeInfo()" aria-label="Close information box">Close</button>
+</div>
+
+<script src="https://openseadragon.github.io/openseadragon/openseadragon.min.js"></script>
+
+<script>
+const viewer = OpenSeadragon({
+  id: "openseadragon",
+  prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
+  tileSources: {
+    type: 'image',
+    url: 'https://jugyah-dev-property-photos.s3.ap-south-1.amazonaws.com/Screenshot_2024_11_19_113920_2f07374098.webp',
+    buildPyramid: false
+  },
+  animationTime: 0.5,
+  gestureSettingsMouse: { scrollToZoom: true }
+});
+
+const pinSVG = `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 40" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 2C7.03 2 3 6.04 3 11.01c0 6.07 9 26 9 26s9-19.93 9-26c0-4.97-4.03-9.01-9-9.01z"/>
+  <circle cx="12" cy="11" r="4"/>
+</svg>
+`;
+
+// Locations with image coordinates, description & image URLs
+const locations = [
+  {
+    id: 1,
+    name: "Maha-Darwaja",
+    descr: '<h2>Maha-Darwaja</h2><p>The main grand gate, historically the highest and most fortified entry point of Raigad Fort.This grand gateway, located a mile after the difficult climb from the base village, stands majestically as the primary entry to the fort complex and has been a symbol of Maratha valor for centuries.</p>',
+    imgSrc: 'maha-darwaja.jpg',
+    x: 0.340,
+    y: 0.27
+  },
+  {
+    id: 2,
+    name: "Takmak Tok",
+    descr: '<h2>Takmak Tok</h2><p>Steep cliff used historically as a site for executions.Takmak Tok served as a severe punishment site for those found guilty of treason or breaking the rules of the forts administration. </p>',
+    imgSrc: 'takmaktok.jpg',
+    x: 0.248,
+    y: 0.17
+  },
+  {
+    id: 3,
+    name: "Bhavani Tok",
+    descr: '<h2>Bhavani Tok</h2><p>A watchtower and vantage point overlooking the fort, named after deity Bhavani.Bhavani Tok is a strategically built bastion at Raigad Fort, on its eastern side, designed to fortify the fort and improve its defense. It is one of four key bastions, alongside Mahadarwaja, Wagh Darwaja, and Hirkani Tok</p>',
+    imgSrc: 'bhavani tok.jpg',
+    x: 0.89,
+    y: 0.08
+  },
+  {
+    id: 4,
+    name: "Rajwada",
+    descr: '<h2>Rajwada</h2><p>The palatial complex within the fort, seat of administration and residence.The "Rajwada Raigad" refers to Raigad Fort, a pivotal historical site in Maharashtra, India. Originally known as Rairi, the fort was captured by Chhatrapati Shivaji Maharaj in 1656 and significantly expanded to become the capital of the Maratha Empire in 1674, following his coronation there. </p>',
+    imgSrc: 'rajwada.jpg',
+    x: 0.46,
+    y: 0.29
+  },
+  {
+    id: 5,
+    name: "Jagdhishwar Mandir",
+    descr: '<h2>Jagdhishwar Mandir</h2><p>"Jagdishwar" can refer to the Jagadishwar Temple at Raigad Fort in Maharashtra, built by Chhatrapati Shivaji Maharaj for daily prayers and as a symbol of his devotion. </p>',
+    imgSrc: 'jagdishwar.jpg',
+    x: 0.735,
+    y: 0.148
+  },
+  {
+    id: 6,
+    name: "Gangasagar Talav",
+    descr: '<h2>Gangasagar Talav</h2><p>Gangasagar Talav (Lake) in the Raigad district of Maharashtra is a historic, man-made reservoir located near the Raigad Fort, traditionally said to have been filled with holy water from the Ganga River during Chhatrapati Shivaji Maharaj coronation to serve the royal family and nearby villages.</p>',
+    imgSrc: 'gangasagar.jpg',
+    x: 0.369,
+    y: 0.33
+  },
+  {
+    id: 7,
+    name: "PRATAPGAD FORT",
+    descr: '<h2>Pratapgad Fort</h2><p>Click to view Pratapgad Fort interactive map.</p>',
+    imgSrc: 'pratapgad.jpg',
+    descr: '<h2>Pratapgad Fort</h2><p>Click to view Pratapgad Fort interactive map.</p><a href="pratapgad.html" style="display:inline-block;margin-top:10px;padding:8px 16px;background:#007bff;color:#fff;border-radius:6px;text-decoration:none;font-weight:bold;">Go to Pratapgad Fort</a>',
+    href: 'pratapgad.html',
+    x: 0.464,
+    y: 0.491,
+    onClick: function() { window.location.href = 'pratapgad.html'; }
+  },
+  {
+    id: 8,
+    name: "RAJGAD FORT",
+    descr: '<h2>Rajgad Fort</h2><p>Click to view Rajgad Fort interactive map.</p>',
+    imgSrc: 'rajgad.jpg',
+    descr: '<h2>Rajgad Fort</h2><p>Click to view Rajgad Fort interactive map.</p><a href="rajgad.html" style="display:inline-block;margin-top:10px;padding:8px 16px;background:#007bff;color:#fff;border-radius:6px;text-decoration:none;font-weight:bold;">Go to Rajgad Fort</a>',
+    href: 'rajgad.html',
+    x: 0.753,
+    y: 0.31,
+    onClick: function() { window.location.href = 'rajgad.html'; }
+  },
+  {
+    id: 9,
+    name: "TORNA FORT",
+    descr: '<h2>Torna Fort</h2><p>Click to view Torna Fort interactive map.</p>',
+    imgSrc: 'torna.jpg',
+    descr: '<h2>Torna Fort</h2><p>Click to view Torna Fort interactive map.</p><a href="torna.html" style="display:inline-block;margin-top:10px;padding:8px 16px;background:#007bff;color:#fff;border-radius:6px;text-decoration:none;font-weight:bold;">Go to Torna Fort</a>',
+    href: 'torna.html',
+    x: 0.759,
+    y: 0.332,
+    onClick: function() { window.location.href = 'torna.html'; }
+  }
+
+  
+];
+
+const container = document.getElementById("openseadragon");
+const infoBox = document.getElementById("infoBox");
+const infoContent = document.getElementById("infoContent");
+const infoImage = document.getElementById("infoImage");
+
+locations.forEach(loc => {
+  const marker = document.createElement("div");
+  marker.className = "marker";
+  marker.innerHTML = pinSVG;
+  marker.title = loc.name;
+
+  
+  const tooltip = document.createElement("div");
+  tooltip.className = "tooltip";
+  tooltip.textContent = loc.name;
+  container.appendChild(tooltip);
+  container.appendChild(marker);
+
+  viewer.addOverlay({
+    element: marker,
+    location: new OpenSeadragon.Point(loc.x, loc.y),
+    placement: OpenSeadragon.Placement.BOTTOM
+  });
+
+  viewer.addOverlay({
+    element: tooltip,
+    location: new OpenSeadragon.Point(loc.x, loc.y),
+    placement: OpenSeadragon.Placement.TOP
+  });
+
+  new OpenSeadragon.MouseTracker({
+    element: marker,
+    clickHandler: () => {
+      infoContent.innerHTML = loc.descr;
+      infoImage.src = loc.imgSrc;
+      infoImage.alt = loc.name + " image";
+      infoBox.style.display = "block";
+    },
+    enterHandler: () => tooltip.classList.add("visible"),
+    exitHandler: () => tooltip.classList.remove("visible"),
+  });
+});
+
+function closeInfo() {
+  infoBox.style.display = "none";
+  infoImage.src = '';
+  infoImage.alt = '';
+}
+window.closeInfo = closeInfo;
+clickHandler: () => {
+  if (typeof loc.onClick === "function") {
+    loc.onClick();
+  } else {
+    infoContent.innerHTML = loc.descr;
+    infoImage.src = loc.imgSrc;
+    infoImage.alt = loc.name + " image";
+    infoBox.style.display = "block";
+  }
+}
+
+</script>
+
+</body>
+</html>
