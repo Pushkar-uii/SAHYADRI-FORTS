@@ -195,3 +195,52 @@ b{
     margin-top: 20px;
     font-family: jaini purva, system-ui;
 }
+.character-cards-container {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.character-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    font-family: "Jaini Purva", system-ui;
+    color: #fff;
+    text-decoration: none;
+    border: 3px solid #b22b2b;
+    border-radius: 50px; /* seal-like rounded shape */
+    background: linear-gradient(135deg, #b22b2b, #6b1919);
+    box-shadow: 0 0 20px rgba(255, 145, 0, 0.5),
+                inset 0 0 10px rgba(255, 255, 255, 0.2);
+    letter-spacing: 2px;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+
+/* Hover animation glowing + expand */
+.character-btn:hover {
+    background: linear-gradient(135deg, #d13333, #901515);
+    transform: scale(1.08);
+    box-shadow: 0 0 30px rgba(255, 120, 0, 0.9),
+                inset 0 0 15px rgba(255, 255, 255, 0.3);
+    color: #ffddbb;
+}
+
+/* Add animated shining effect */
+.character-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+    transform: skewX(-20deg);
+}
+
+.character-btn:hover::after {
+    left: 150%;
+    transition: left 0.8s ease;
+}
