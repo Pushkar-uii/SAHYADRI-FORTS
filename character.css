@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaini+Purva&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jaini+Purva&family=Kalam:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+
+body {
+  background-image: url(premium_photo-1667761637876-e704c906927d.jpeg);
+  z-index: -5000;
+  background-repeat: repeat;
+  background-position: top left;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+  background-size: auto;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  border-bottom: 2px solid #ccc;
+  z-index: 9999;
+  padding: 0.9rem 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 0.5s ease;
+}
+
+header:hover {
+  background-color: rgba(255, 255, 255, 0.315);
+  border-bottom: rgb(105, 98, 98) 2px solid;
+  transition: all 0.5s ease, border-bottom 0.5s ease;
+}
+
+main {
+  position: relative;
+  top: 24vh;
+  width: 100%;
+  height: 100%;
+}
+
+header nav {
+  background-color: rgba(197, 20, 20, 0);
+  position: static;
+  height: 4rem;
+  max-width: 1940px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+
+.rajmudra {
+  width: 4.3rem;
+  height: 4.3rem;
+  transition: all 0.7s ease-in-out;
+}
+
+.rajmudra:hover {
+  filter: drop-shadow(0 0 20px #ff910082) drop-shadow(0 0 40px #ff91007a);
+  width: 4.7rem;
+  height: 4.7rem;
+  transition: all 0.7s ease-in-out;
+}
+
+.textlogo {
+  font-family: "Jaini Purva", system-ui;
+  color: rgb(155, 54, 54);
+  font-size: 5.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-left: -500px;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+  transition: all 0.7s ease-in-out;
+}
+
+.textlogo:hover {
+  color: rgba(190, 22, 22, 0.78);
+  font-weight: 650;
+  font-size: 5.7rem;
+  transition: all 0.7s ease-in-out;
+}
+
+header ul {
+  display: flex;
+  list-style: circle;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+
+header ul li {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+  transition: all 0.7s ease-in, font-weight 0.9s ease-in;
+}
+
+header ul li:hover {
+  color: rgba(190, 22, 22, 0.7);
+  font-weight: 650;
+  transition: all 0.7s ease-in, font-weight 0.9s ease-in;
+  font-size: 1.3rem;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+  padding: 0 1.5rem;
+  text-transform: uppercase;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 24 24"><path fill="%23FF9800" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+  transition: color 0.7s ease-in, font-weight 0.9s ease-in;
+}
+
+header a:hover {
+  color: rgba(190, 22, 22, 0.7);
+  font-weight: 650;
+  transition: all 0.7s ease-in, font-weight 0.7s ease-in;
+  font-size: 1.3rem;
+}
+
+section {
+  display: flex;
+  border: 2px solid bisque;
+  border-radius: 5px;
+  padding: 12px;
+  width: 97vw;
+  height: 68vh;
+  margin: 10px;
+  transition: all 0.6s ease-in-out;
+}
+
+section:hover {
+  border: 1px solid rgb(105, 98, 98);
+  box-shadow: 0 0 10px rgba(105, 98, 98, 0.5);
+  transform: scale(1.001);
+  transition: all 0.6s ease-in-out;
+}
+
+.section-even {
+  background-color: rgba(255, 255, 255, 0.253);
+  color: rgb(105, 98, 98);
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.section-odd {
+  background-color: rgba(0, 0, 0, 0.253);
+  color: rgb(105, 98, 98);
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.main-heading {
+  font-family: "Yatra One", system-ui;
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: rgb(155, 54, 55);
+  text-align: center;
+  margin-top: -7rem;
+  transition: all 0.7s ease-in-out;
+}
+
+.main-heading:hover {
+  transform: scale(1.04);
+  filter: drop-shadow(0 0 3px #ff910082) drop-shadow(0 0 7px #ff91007a);
+  transition: all 0.7s ease-in-out;
+}
+
+.sub-heading {
+  font-family: "Yatra One", system-ui;
+  font-size: 2rem;
+  font-weight: 300;
+  color: rgb(27, 26, 26);
+  text-align: center;
+  margin-top: -1.9rem;
+  padding-bottom: 1rem;
+  transition: all 0.7s ease-in-out;
+}
+
+.sub-heading:hover {
+  transform: scale(1.04);
+  filter: drop-shadow(0 0 3px #ff910082) drop-shadow(0 0 7px #ff91007a);
+  transition: all 0.7s ease-in-out;
+}
+
+/* Image styles and hover */
+.shivajimaharaj-image {
+  width: 34vw;
+  height: 59vh;
+  margin-left: -6.5rem;
+  margin-top: -5vh;
+  filter: drop-shadow(0 12px 32px rgba(155, 54, 54, 0.35));
+  transition: all 0.7s ease-in-out;
+}
+
+.shivajimaharaj-image:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 5px #ff910082) drop-shadow(0 0 10px #ff91007a);
+  transition: all 0.7s ease-in-out;
+}
+
+/* Text styling */
+.name-text {
+  font-family: "Yatra One", system-ui;
+  font-size: 2.3rem;
+  font-weight: 300;
+  color: rgb(121, 41, 41);
+  margin-top: -20px;
+  margin-left: -3rem;
+  text-align: center;
+  transition: all 0.7s ease-in-out;
+  z-index: 90;
+  position: relative;
+}
+
+.name-text:hover {
+  filter: drop-shadow(0 0 3px #ff910082) drop-shadow(0 0 7px #ff91007a);
+  transition: all 0.7s ease-in-out;
+}
+
+.life-text {
+  font-family: "Yatra One", system-ui;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: rgb(88, 31, 31);
+  margin-top: -12px;
+  margin-left: -7.5rem;
+  text-align: center;
+  transition: all 0.7s ease-in-out;
+  z-index: 90;
+  position: relative;
+}
+
+.life-text:hover {
+  filter: drop-shadow(0 0 3px #ff910082) drop-shadow(0 0 7px #ff91007a);
+  transition: all 0.7s ease-in-out;
+}
+
+.description-text {
+  font-family: "Kalam", system-ui;
+  font-size: 2rem;
+  font-weight: 500;
+  color: rgb(88, 31, 31);
+  margin-top: 4rem;
+  word-spacing: 1px;
+  margin-left: -1.5rem;
+  text-align: center;
+  padding: 0;
+  transition: all 0.7s ease-in-out;
+  z-index: 90;
+  position: relative;
+}
+
+.description-text:hover {
+  filter: drop-shadow(0 0 3px #ff910082) drop-shadow(0 0 7px #ff91007a);
+  transition: all 0.7s ease-in-out;
+}
+
+/* Other images */
+.sambhajimaharaj-image {
+  width: 26vw;
+  height: 50vh;
+  margin-left: -2.5rem;
+  margin-top: -1rem;
+  padding-bottom: 20px;
+  filter: drop-shadow(0 12px 32px rgba(155, 54, 54, 0.35));
+  transition: all 0.7s ease-in-out;
+}
+
+.sambhajimaharaj-image:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 5px #ff910082) drop-shadow(0 0 10px #ff91007a);
+  transition: all 0.7s ease-in-out;
+}
+
+.sambhajimaharaj-text {
+  font-family: "Yatra One", system-ui;
+  font-size: 2.1rem;
+  font-weight: 300;
+  color: rgb(121, 41, 41);
+  margin-top: -20px;
+  margin-left: 0.45rem;
+  text-align: center;
+  transition: all 0.7s ease-in-out;
+}
+
+.sambhajimaharaj-text:hover {
+  filter: drop-shadow(0 0 3px #ff910082) drop-shadow(0 0 7px #ff91007a);
+  transition: all 0.7s ease-in-out;
+}
+
+/* More image hover effects */
+.jijausaheb-image {
+  width: 22vw;
+  height: 46vh;
+  margin-left: -3.9rem;
+  margin-top: 5.5rem;
+  padding-bottom: -10px;
+  filter: drop-shadow(0 12px 32px rgba(155, 54, 54, 0.35));
+  transition: all 0.7s ease-in-out;
+}
+
+.jijausaheb-image:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 5px #ff910082) drop-shadow(0 0 10px #ff91007a);
+  transition: all 0.7s ease-in-out;
+}
+
+.tanajimalusare-image {
+  width: 18vw;
+  height: 50vh;
+  margin-left: 2.5rem;
+  margin-top: 1.5rem;
+  padding-bottom: 20px;
+  filter: drop-shadow(0 12px 32px rgba(155, 54, 54, 0.35));
+  transition: all 0.7s ease-in-out;
+}
+
+.tanajimalusare-image:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 5px #ff910082) drop-shadow(0 0 10px #ff91007a);
+  transition: all 0.7s ease-in-out;
+}
+
+.bajiprabhu-image {
+  width: 21vw;
+  height: 50vh;
+  margin-left: 3.5rem;
+  padding-bottom: 5px;
+  margin-top: 1rem;
+  filter: drop-shadow(0 12px 32px rgba(155, 54, 54, 0.35));
+  transition: all 0.7s ease-in-out;
+}
+
+.bajiprabhu-image:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 5px #ff910082) drop-shadow(0 0 10px #ff91007a);
+  transition: all 0.7s ease-in-out;
+}
+
+.netajipalkar-image {
+  width: 19vw;
+  height: 52vh;
+  margin-left: 3.5rem;
+  padding-left: 0;
+  padding-bottom: 22px;
+  filter: drop-shadow(0 12px 32px rgba(155, 54, 54, 0.35));
+  transition: all 0.7s ease-in-out;
+}
+
+.netajipalkar-image:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 5px #ff910082) drop-shadow(0 0 10px #ff91007a);
+  transition: all 0.7s ease-in-out;
+}
+
+/* Book button styling */
+.book-button {
+  margin: 1rem 0 1rem 1rem;
+  border-radius: 5px;
+  background-color: wheat;
+  color: brown;
+  font-family: "Yatra One", system-ui;
+  font-size: 1rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  transition: all 0.5s ease-in-out;
+}
+
+.book-button:hover {
+  background-color: rgb(218, 165, 32);
+  color: #5a2a00;
+  border-color: aliceblue;
+  letter-spacing: 1.5px;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Book text styling */
+.book-text {
+  font-family: "Yatra One", cursive, system-ui;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #7a2e0d; /* rich brownish-red */
+  text-align: center;
+  margin-top: 1rem;
+  transition: all 0.7s ease-in-out;
+  text-decoration: underline;
+  letter-spacing: 1.2px;
+  text-shadow:
+    0 1px 2px rgba(255, 169, 77, 0.7),
+    0 0 5px rgba(255, 169, 77, 0.5);
+  cursor: default;
+}
+
+.book-text:hover {
+  color: #d4711c; /* brighter orange */
+  text-shadow:
+    0 1px 3px rgba(255, 214, 128, 0.8),
+    0 0 8px rgba(255, 214, 128, 0.6);
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+footer
+{
+    top: 455vh;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2vh;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    padding: 1rem;
+    font-family: "Poppins", system-ui;
+    font-size: 1.5rem;
+    color: rgb(77, 25, 25);
+    z-index: 9999;
+}

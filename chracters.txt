@@ -1,0 +1,20 @@
+STEPS TO START THE ENVIRONMENT FOR SOS
+
+1. pip install Flask
+2. python app.py
+
+footer
+{
+    top: 455vh;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2vh;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    padding: 1rem;
+    font-family: "Poppins", system-ui;
+    font-size: 1.5rem;
+    color: rgb(77, 25, 25);
+    z-index: 9999;
+}
