@@ -307,158 +307,149 @@ header a:hover {
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    const viewer = OpenSeadragon({
-      id: "openseadragon",
-      prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
-      tileSources: {
-        type: 'image',
-        url: 'purandar-map (1).jpg',
-        buildPyramid: false
-      },
-      animationTime: 0.5,
-      gestureSettingsMouse: { scrollToZoom: true }
+  const viewer = OpenSeadragon({
+    id: "openseadragon",
+    prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
+    tileSources: {
+      type: 'image',
+      url: 'purandar-map (1).jpg',
+      buildPyramid: false
+    },
+    animationTime: 0.5,
+    gestureSettingsMouse: { scrollToZoom: true }
+  });
+
+  const pinSVG = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 40" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2C7.03 2 3 6.04 3 11.01c0 6.07 9 26 9 26s9-19.93 9-26c0-4.97-4.03-9.01-9-9.01z"/>
+    <circle cx="12" cy="11" r="4"/>
+  </svg>
+  `;
+
+  // Locations with image coordinates, description & image URLs
+  const locations = [
+    {
+      id: 1,
+      name: "Balekila",
+      descr: '<h2>Balekila</h2><p>Balekilla is the upper, more secure, and historically significant part of the Purandar Fort, located near Pune, India.</p>',
+      imgSrc: 'balekila.jpg',
+      x: 0.340,
+      y: 0.27
+    },
+    {
+      id: 2,
+      name: "Kedhareshwar Temple",
+      descr: '<h2>Kedhareshwar Temple</h2><p>The Kedareshwar Temple at Purandar Fort is a reconstructed temple dedicated to Lord Shiva, located at a high point on the fort with views of the surrounding areas</p>',
+      imgSrc: 'kedhareshwar.jpg',
+      x: 0.298,
+      y: 0.31
+    },
+
+    {
+      id: 3,
+      name: "Purandareshwar Temple",
+      descr: '<h2>Purandareshwar Temple </h2><p>Purandar Fort Travel Guide, History And How To Reach ...The Purandeshwar Temple is a significant ancient temple dedicated to the deity Purandeshwar, from whom the Purandar Fort takes its name. Located at the base of Purandar Fort in Narayanpur, near Pune, Maharashtra.</p>',
+      imgSrc: 'purandeshwar.jpg',
+      x: 0.46,
+      y: 0.29
+    },
+
+    {
+      id: 4,
+      name: "Kokani Buruj",
+      descr: '<h2>Kokani Buruj</h2><p>Kokani Buruj refers to the Shendrya Buruj (or bastion) at Purandar Fort, a historic hill fort located near Pune, Maharashtra. This bastion is associated with a mythological legend where a married couple was sacrificed to ensure the forts stability against falling rocks</p>',
+      imgSrc: 'kokani-buruj.jpg',
+      x: 0.209,
+      y: 0.34
+    },
+   {
+      id: 5,
+      name: "SINHAGAD FORT",
+      descr: '<h2>Sinhagad Fort</h2><p>Click to view Sinhagad Fort interactive map.</p>',
+      imgSrc: 'singhagad.jpg',
+      href: 'singhagad.html',
+      x: 0.085,
+      y: 0.184,
+      onClick: function() { window.location.href = 'pratapgad.html'; }
+    },
+    {
+      id: 6,
+      name: "RAJGAD FORT",
+      descr: '<h2>Rajgad Fort</h2><p>Click to view Rajgad Fort interactive map.</p>',
+      imgSrc: 'rajgad.jpg',
+      href: 'rajgad.html',
+      x: 0.703,
+      y: 0.551,
+      onClick: function() { window.location.href = 'rajgad.html'; }
+    },
+    {
+      id: 7,
+      name: "TORNA FORT",
+      descr: '<h2>Torna Fort</h2><p>Click to view Torna Fort interactive map.</p>',
+      imgSrc: 'torna.jpg',
+      href: 'torna.html',
+      x: 0.657,
+      y: 0.550,
+      onClick: function() { window.location.href = 'torna.html'; }
+    }
+  ];
+
+  const container = document.getElementById("openseadragon");
+  const infoBox = document.getElementById("infoBox");
+  const infoContent = document.getElementById("infoContent");
+  const infoImage = document.getElementById("infoImage");
+
+  locations.forEach(loc => {
+    const marker = document.createElement("div");
+    marker.className = "marker";
+    marker.innerHTML = pinSVG;
+    marker.title = loc.name;
+
+    const tooltip = document.createElement("div");
+    tooltip.className = "tooltip";
+    tooltip.textContent = loc.name;
+    container.appendChild(tooltip);
+    container.appendChild(marker);
+
+    viewer.addOverlay({
+      element: marker,
+      location: new OpenSeadragon.Point(loc.x, loc.y),
+      placement: OpenSeadragon.Placement.BOTTOM
     });
-    
-    const pinSVG = `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 40" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 2C7.03 2 3 6.04 3 11.01c0 6.07 9 26 9 26s9-19.93 9-26c0-4.97-4.03-9.01-9-9.01z"/>
-      <circle cx="12" cy="11" r="4"/>
-    </svg>
-    `;
-    
-    // Locations with image coordinates, description & image URLs
-    const locations = [
-      {
-        id: 1,
-        name: "Balekila",
-        descr: '<h2>Balekila</h2><p>Balekilla is the upper, more secure, and historically significant part of the Purandar Fort, located near Pune, India.</p>',
-        imgSrc: 'balekila.jpg',
-        x: 0.340,
-        y: 0.27
-      },
-      {
-        id: 2,
-        name: "Kedhareshwar Temple",
-        descr: '<h2>Kedhareshwar Temple</h2><p>The Kedareshwar Temple at Purandar Fort is a reconstructed temple dedicated to Lord Shiva, located at a high point on the fort with views of the surrounding areas</p>',
-        imgSrc: 'kedhareshwar.jpg',
-        x: 0.298,
-        y: 0.31
-      },
-      
-      {
-        id: 3,
-        name: "Purandareshwar Temple",
-        descr: '<h2>Purandareshwar Temple </h2><p>Purandar Fort Travel Guide, History And How To Reach ...The Purandeshwar Temple is a significant ancient temple dedicated to the deity Purandeshwar, from whom the Purandar Fort takes its name. Located at the base of Purandar Fort in Narayanpur, near Pune, Maharashtra.</p>',
-        imgSrc: 'purandeshwar.jpg',
-        x: 0.46,
-        y: 0.29
-      },
-     
-      {
-        id: 4,
-        name: "Kokani Buruj",
-        descr: '<h2>Kokani Buruj</h2><p>Kokani Buruj refers to the Shendrya Buruj (or bastion) at Purandar Fort, a historic hill fort located near Pune, Maharashtra. This bastion is associated with a mythological legend where a married couple was sacrificed to ensure the forts stability against falling rocks</p>',
-        imgSrc: 'kokani-buruj.jpg',
-        x: 0.209,
-        y: 0.34
-      },
-     {
-        id: 5,
-        name: "SINHAGAD FORT",
-        descr: '<h2>Sinhagad Fort</h2><p>Click to view Sinhagad Fort interactive map.</p>',
-        imgSrc: 'singhagad.jpg',
-        descr: '<h2>Sinhagad Fort</h2><p>Click to view Sinhagad Fort interactive map.</p><a href="singhagad.html" style="display:inline-block;margin-top:10px;padding:8px 16px;background:#007bff;color:#fff;border-radius:6px;text-decoration:none;font-weight:bold;">Go to Sinhagad Fort</a>',
-        href: 'singhagad.html',
-        x: 0.085,
-        y: 0.184,
-        onClick: function() { window.location.href = 'pratapgad.html'; }
-      },
-      {
-        id: 6,
-        name: "RAJGAD FORT",
-        descr: '<h2>Rajgad Fort</h2><p>Click to view Rajgad Fort interactive map.</p>',
-        imgSrc: 'rajgad.jpg',
-        descr: '<h2>Rajgad Fort</h2><p>Click to view Rajgad Fort interactive map.</p><a href="rajgad.html" style="display:inline-block;margin-top:10px;padding:8px 16px;background:#007bff;color:#fff;border-radius:6px;text-decoration:none;font-weight:bold;">Go to Rajgad Fort</a>',
-        href: 'rajgad.html',
-        x: 0.703,
-        y: 0.551,
-        onClick: function() { window.location.href = 'rajgad.html'; }
-      },
-      {
-        id: 7,
-        name: "TORNA FORT",
-        descr: '<h2>Torna Fort</h2><p>Click to view Torna Fort interactive map.</p>',
-        imgSrc: 'torna.jpg',
-        descr: '<h2>Torna Fort</h2><p>Click to view Torna Fort interactive map.</p><a href="torna.html" style="display:inline-block;margin-top:10px;padding:8px 16px;background:#007bff;color:#fff;border-radius:6px;text-decoration:none;font-weight:bold;">Go to Torna Fort</a>',
-        href: 'torna.html',
-        x: 0.657,
-        y: 0.550,
-        onClick: function() { window.location.href = 'torna.html'; }
-      }
-    ];
-    
-    const container = document.getElementById("openseadragon");
-    const infoBox = document.getElementById("infoBox");
-    const infoContent = document.getElementById("infoContent");
-    const infoImage = document.getElementById("infoImage");
-    
-    locations.forEach(loc => {
-      const marker = document.createElement("div");
-      marker.className = "marker";
-      marker.innerHTML = pinSVG;
-      marker.title = loc.name;
-    
-      
-      const tooltip = document.createElement("div");
-      tooltip.className = "tooltip";
-      tooltip.textContent = loc.name;
-      container.appendChild(tooltip);
-      container.appendChild(marker);
-    
-      viewer.addOverlay({
-        element: marker,
-        location: new OpenSeadragon.Point(loc.x, loc.y),
-        placement: OpenSeadragon.Placement.BOTTOM
-      });
-    
-      viewer.addOverlay({
-        element: tooltip,
-        location: new OpenSeadragon.Point(loc.x, loc.y),
-        placement: OpenSeadragon.Placement.TOP
-      });
-    
-      new OpenSeadragon.MouseTracker({
-        element: marker,
-        clickHandler: () => {
+
+    viewer.addOverlay({
+      element: tooltip,
+      location: new OpenSeadragon.Point(loc.x, loc.y),
+      placement: OpenSeadragon.Placement.TOP
+    });
+
+    new OpenSeadragon.MouseTracker({
+      element: marker,
+      clickHandler: () => {
+        if (typeof loc.onClick === "function") {
+          loc.onClick();
+        } else {
           infoContent.innerHTML = loc.descr;
           infoImage.src = loc.imgSrc;
           infoImage.alt = loc.name + " image";
           infoBox.style.display = "block";
-        },
-        enterHandler: () => tooltip.classList.add("visible"),
-        exitHandler: () => tooltip.classList.remove("visible"),
-      });
+        }
+      },
+      enterHandler: () => tooltip.classList.add("visible"),
+      exitHandler: () => tooltip.classList.remove("visible"),
     });
-    
-    function closeInfo() {
-      infoBox.style.display = "none";
-      infoImage.src = '';
-      infoImage.alt = '';
-    }
-    window.closeInfo = closeInfo;
-    clickHandler: () => {
-      if (typeof loc.onClick === "function") {
-        loc.onClick();
-      } else {
-        infoContent.innerHTML = loc.descr;
-        infoImage.src = loc.imgSrc;
-        infoImage.alt = loc.name + " image";
-        infoBox.style.display = "block";
-      }
-    }
+  });
+
+  function closeInfo() {
+    infoBox.style.display = "none";
+    infoImage.src = '';
+    infoImage.alt = '';
+  }
+  window.closeInfo = closeInfo;
 });
 </script>
 
 </body>
 </html>
+
 
